@@ -1,8 +1,8 @@
 // Fetching JSON OMB API
 const list = document.querySelector(".list-inline");
 
-const fetchMovies = () => {
-  fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
+const fetchMovies = (movieRequest) => {
+  fetch(`http://www.omdbapi.com/?s=${movieRequest}&apikey=adf1f2d7`)
     .then(response => response.json())
     .then((data) => {
       data.Search.forEach(result => {
@@ -17,7 +17,12 @@ const fetchMovies = () => {
 
 };
 
-fetchMovies();
-
 const search = document.querySelector("#search-form");
-console.log(search);
+
+
+search.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const input = event.currentTarget.querySelector(".form-control");
+  list.innerHTML = "";
+  fetchMovies(input.value);
+})
