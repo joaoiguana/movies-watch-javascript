@@ -45,7 +45,7 @@ ul, li {
   text-decoration: none;
 }
 
-.container {
+.main {
   display: flex;
   justify-content: center;
 }
@@ -65,5 +65,4 @@ ul, li {
 
 .search{
   margin: 2rem;
-  border-radius: 10rem;
 }
