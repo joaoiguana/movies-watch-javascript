@@ -45,6 +45,10 @@ ul, li {
   text-decoration: none;
 }
 
+.title {
+  margin-top: 2rem;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -56,17 +60,35 @@ ul, li {
 }
 
 .selected {
-  align-self: center;
+  display: grid;
+  grid-gap: var(--length-md1);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "movie";
+}
+
+@media only screen and (min-width: 800px) {
+  .selected {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+     "movie movie movie";
+  }
+}
+
+.poster-grid {
+  grid-area: "movie";
 }
 
 .movie-card {
-  padding: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1rem;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   margin-top: 2rem;
   width: 100%;
+  align-items: center;
+  grid-area: movie-card;
 }
 
-@media only screen and (min-width: 1220px) {
+@media only screen and (min-width: 800px) {
   .movie-card {
     width: 50%;
   }

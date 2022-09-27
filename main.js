@@ -8,8 +8,8 @@ const fetchMovies = (movieRequest) => {
       data.Search.forEach(result => {
         const movie = `
         <div class="movie-card">
-          <li class="list-inline-item">
-            <img src=${result.Poster} alt="Movie Poster">
+          <li class="list-inline-item poster-grid">
+            <img src=${result.Poster} alt="Movie Poster" style="height: 24rem;">
             <h2><strong>${result.Title}</strong></h2>
             <p>Year: ${result.Year}</p>
             <p>IMDB id: ${result.imdbID}</p>
