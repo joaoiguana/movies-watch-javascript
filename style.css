@@ -1,0 +1,69 @@
+:root {
+  --font-main: 'Sora', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+
+  --color-primary: #44f6fd;
+  --color-accent: #fffffa;
+  --color-default: #363636;
+
+  --color-background: #242424;
+  --color-card: #1b1b1b;
+
+  --color-text: #f9f9f9;
+  --color-label: #aaaaaa;
+  --color-disabled: #888888;
+
+  --length-sm1: 0.3rem;
+  --length-sm2: 0.6rem;
+  --length-sm3: 0.8rem;
+
+  --length-md1: 1rem;
+  --length-md2: 1.4rem;
+  --length-md3: 1.8rem;
+
+  --length-lg1: 2.2rem;
+  --length-lg2: 3.3rem;
+  --length-lg3: 4.4rem;
+
+  --length-xl1: 6.5rem;
+  --length-xl2: 8.5rem;
+  --length-xl3: 10.5rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-main);
+  margin: var(--length-md3);
+}
+
+p{
+  font-family: var(--font-secondary);
+  text-align: left;
+}
+
+ul, li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-card {
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1220px) {
+  .movie-card {
+    width: 50%;
+  }
+}
+
+.search{
+  margin: 2rem;
+  border-radius: 10rem;
+}
